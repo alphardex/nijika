@@ -1,0 +1,15 @@
+body {
+  color: white;
+  background: #333333;
+}
+
+:root {
+  --primary-color: #f1d576;
+  --info-color: #3861a6;
+  --success-color: #f59bb1;
+  --danger-color: #df4955;
+}
+
+h3 {
+  margin: 0;
+}
