@@ -36,7 +36,7 @@ onMounted(() => {
     letters.forEach((letter, i) => {
       let span = document.createElement("span");
       span.textContent = letter;
-      span.style.transitionDelay = `${(i / 20) * props.stagger}s`;
+      span.style.setProperty("--i", `${i}`);
       span.dataset.text = letter;
       parent.value?.append(span);
     });
@@ -57,6 +57,7 @@ onMounted(() => {
   --text-float-leading: v-bind(textLeading);
   --text-float-style: v-bind(textStyle);
   --text-float-white-space: v-bind(textWhiteSpace);
+  --text-float-stagger: v-bind(stagger);
 
   display: flex;
   overflow: hidden;
@@ -71,6 +72,7 @@ onMounted(() => {
     line-height: var(--text-float-leading);
     font-style: var(--text-float-style);
     white-space: var(--text-float-white-space);
+    transition-delay: calc(var(--i) * var(--text-float-stagger) * 0.05 * 1s);
 
     &::before {
       position: absolute;
