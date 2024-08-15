@@ -91,6 +91,26 @@ onMounted(() => {
           </div>
         </div>
         <div class="space-y-4">
+          <h3 class="text-primary">Text Block</h3>
+          <div>
+            <div class="flex space-x-4">
+              <text-block>Default Block</text-block>
+              <text-block block-color="var(--success-color)">
+                Pink Block
+              </text-block>
+              <text-block hover-text-color="#bbbbbb">
+                Hover Color
+              </text-block>
+              <text-block text-padding="0 12px">
+                Different Padding
+              </text-block>
+              <text-block block-transform-origin="center">
+                Origin Center
+              </text-block>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
           <h3 class="text-primary">Magnet Mouse</h3>
           <div>
             <magnet-mouse threshold="120">
@@ -109,9 +129,7 @@ onMounted(() => {
       </div>
     </div>
     <curve-mask mask-color="var(--info-color)"></curve-mask>
-    <div
-      class="another-scene fixed z-5 top-0 left-0 cover transition-opacity duration-500 hollow"
-    >
+    <div class="another-scene fixed z-5 top-0 left-0 cover transition-opacity duration-500 hollow">
       <div class="absolute hv-center">
         <button class="btn btn-primary btn-ghost" @click="closeCurveMask">
           Close

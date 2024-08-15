@@ -7,7 +7,7 @@ export default defineConfig({
     vue({
       // Note: Storybook doesn't support ce yet, so turn this off.
       // But when you build the lib, plz turn this on.
-      // customElement: true,
+      customElement: true,
     }),
   ],
   server: {
